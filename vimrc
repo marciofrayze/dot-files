@@ -2,6 +2,18 @@
 execute pathogen#infect()
 syntax on
 
+" Usar por padrão o clipboard para copia de texto.
+if has("clipboard")
+  set clipboard=unnamed
+
+  if has("unnamedplus") " Suporte ao X11. 
+    set clipboard+=unnamedplus
+  endif
+endif
+
+" Desabilitando criação de arquivos de swap.
+set noswapfile
+
 " Identação de código.
 filetype plugin indent on
 
