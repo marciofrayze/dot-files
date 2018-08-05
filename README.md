@@ -1,5 +1,5 @@
 # .vimrc
-Configurações para editor vim.
+Minhas configurações para o editor vim (~/.vimrc).
 
 Maioria dos plugins gerenciados pelo Pathogen.
 
