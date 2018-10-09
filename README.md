@@ -34,3 +34,13 @@ Mais informações em: https://github.com/pangloss/vim-javascript
 git clone https://github.com/posva/vim-vue.git ~/.vim/bundle/vim-vue
 
 Mais informações em: https://github.com/posva/vim-vue
+
+### Instalando ctrlp.vim
+git clone git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
+
+Mais informações em: https://github.com/kien/ctrlp.vim
+
+### Instalando emmet-vim
+git clone git clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim
+
+Mais informações em: https://github.com/mattn/emmet-vim
