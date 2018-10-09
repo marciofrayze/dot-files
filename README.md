@@ -36,7 +36,7 @@ git clone https://github.com/posva/vim-vue.git ~/.vim/bundle/vim-vue
 Mais informações em: https://github.com/posva/vim-vue
 
 ### Instalando ctrlp.vim
-git clone git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
+git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 
 Mais informações em: https://github.com/kien/ctrlp.vim
 
