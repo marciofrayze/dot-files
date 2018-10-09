@@ -8,6 +8,8 @@ Maioria dos plugins gerenciados pelo Pathogen.
 - vim-javacomplete2
 - vim-javascript	
 - vim-vue
+- ctrlp.vim
+- emmet-vim
 
 ### Instalando o Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
