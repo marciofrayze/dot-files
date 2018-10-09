@@ -3,7 +3,7 @@ execute pathogen#infect()
 
 " Highlighting e cores
 syntax on
-color murphy
+color darkblue
 
 " Desabilita as setas (útil para perder o hábito de usa-las).
 noremap <Up> <NOP>
