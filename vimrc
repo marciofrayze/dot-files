@@ -5,6 +5,9 @@ execute pathogen#infect()
 syntax on
 color darkblue
 
+" Recarrega caso arquivo tenha sido alterado fora do vim.
+set autoread
+
 " Desabilita as setas (útil para perder o hábito de usa-las).
 noremap <Up> <NOP>
 noremap <Down> <NOP>
