@@ -41,6 +41,6 @@ git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 Mais informações em: https://github.com/kien/ctrlp.vim
 
 ### Instalando emmet-vim
-git clone git clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim
+git clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim
 
 Mais informações em: https://github.com/mattn/emmet-vim
