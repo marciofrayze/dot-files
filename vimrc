@@ -1,8 +1,20 @@
 " Inicializando o Pathogen. Utilizado para facilitar a gestão de plugins.
 execute pathogen#infect()
-syntax on
 
-" Usar por padrão o clipboard para copia de texto.
+" Highlighting e cores
+syntax on
+color murphy
+
+" Desabilita as setas (útil para perder o hábito de usa-las).
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" Deixa 7 linhas acima e abaixo quando estiver movendo com j e k.
+set so=7
+
+" Usar por padrão o clipboard para copiar de texto.
 if has("clipboard")
   set clipboard=unnamed
 
@@ -16,6 +28,29 @@ set noswapfile
 
 " Identação de código.
 filetype plugin indent on
+
+" Se string de busca fora toda minuscusa, faça uma busca case insensitive.
+set smartcase
+
+" Melhora regex.
+set magic
+
+" Exibe caracter que faz 'match' com o caracter selecionado atualmente.
+set showmatch
+set mat=2
+
+" Desabilita sons em caso de erros.
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" Destaca resultado de busca.
+set hlsearch
+
+" Por padrão usar utf-8 e unix.
+set encoding=utf8
+set ffs=unix,dos,mac
 
 " Painel lateral à esquerda.
 let g:netrw_banner = 0
@@ -35,6 +70,7 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 " Exibir número da linha corrente e número de linhas relativas.
 set number
 set relativenumber
+set ruler
 
 " Tabs e indentação.
 set autoindent
@@ -56,3 +92,6 @@ nmap <f6> <plug>(javacomplete-imports-addmissing)
 imap <f6> <plug>(javacomplete-imports-addmissing)
 nmap <f7> <plug>(javacomplete-imports-removeunused)
 imap <f7> <plug>(javacomplete-imports-removeunused)
+
+" Configurando vim-airline (tabs).
+let g:airline#extensions#tabline#enabled = 1
