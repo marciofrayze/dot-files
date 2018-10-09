@@ -17,6 +17,10 @@ noremap <Right> <NOP>
 " Deixa 7 linhas acima e abaixo quando estiver movendo com j e k.
 set so=7
 
+" Configurações do wildmenu (auto completar o tab de forma mais eficiência/visual).
+set wildmenu
+set wildmode=longest:list,full
+
 " Usar por padrão o clipboard para copiar de texto.
 if has("clipboard")
   set clipboard=unnamed
