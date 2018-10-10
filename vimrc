@@ -14,6 +14,9 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" Atalho (nt) para criar nova tab.
+ nnoremap nt :tabnew<CR>
+
 " Deixa 7 linhas acima e abaixo quando estiver movendo com j e k.
 set so=7
 
