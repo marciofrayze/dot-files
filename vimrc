@@ -20,6 +20,9 @@ noremap <Right> <NOP>
 " Deixa 7 linhas acima e abaixo quando estiver movendo com j e k.
 set so=7
 
+" Ao realizar uma busca, quando chegar ao fim, não volte ao começo.
+set nowrapscan
+
 " Configurações do wildmenu (auto completar o tab de forma mais eficiência/visual).
 set wildmenu
 set wildmode=longest:list,full
