@@ -77,9 +77,8 @@ augroup END
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'  
 
-" Exibir número da linha corrente e número de linhas relativas.
+" Exibir número da linha corrente.
 set number
-set relativenumber
 set ruler
 
 " Tabs e indentação.
