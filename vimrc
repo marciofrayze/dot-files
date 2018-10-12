@@ -1,7 +1,7 @@
 " Inicializando o Pathogen. Utilizado para facilitar a gestão de plugins.
 execute pathogen#infect()
 
-" Highlighting e cores
+" Highlighting e cores.
 syntax on
 color darkblue
 
