@@ -42,7 +42,7 @@ set noswapfile
 " Identação de código.
 filetype plugin indent on
 
-" Se string de busca fora toda minuscusa, faça uma busca case insensitive.
+" Se string de busca for toda minúscula, faça uma busca case insensitive.
 set smartcase
 
 " Melhora regex.
