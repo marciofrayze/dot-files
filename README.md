@@ -4,6 +4,7 @@ Minhas configurações para o editor vim (~/.vimrc).
 Maioria dos plugins gerenciados pelo Pathogen.
 
 ## Plugins utilizados
+- nerdtree
 - typescript-vim
 - vim-javacomplete2
 - vim-javascript	
@@ -18,6 +19,11 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 Mais informações em: https://github.com/tpope/vim-pathogen
+
+#### Nerdtree
+git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+
+Mais informações em: https://github.com/scrooloose/nerdtree
 
 #### typescript-vim	
 git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
