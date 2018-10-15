@@ -62,16 +62,13 @@ set hlsearch
 set encoding=utf8
 set ffs=unix,dos,mac
 
-" Painel lateral à esquerda.
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-augroup ProjectDrawer
-  autocmd!
-  autocmd VimEnter * :Vexplore
-augroup END
+" Configurando nerdtree e o exibe caso nenhum arquivo tenha sido aberto.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Mapeia o C-n para abri-lo.
+map <C-n> :NERDTreeToggle<CR>
+" Fecha o vim caso feche demais buffers e sobre apenas o nerdtree.
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Plugin de busca (ctr + p).
 set runtimepath^=~/.vim/bundle/ctrlp.vim
