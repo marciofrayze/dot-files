@@ -1,0 +1,11 @@
+ZSH_THEME="robbyrussell"
+
+plugins=(
+   git
+   extract
+   cp
+   docker
+   gradle
+ ) 
+
+source $ZSH/oh-my-zsh.sh
