@@ -1,6 +1,4 @@
-# Minhas configurações
-
-Configurações que costumo utilizar no vim, tmux e oh my zsh.
+# Minhas configurações do vim, tmux e oh my zsh.
 
 [Vim](/vim)
 
