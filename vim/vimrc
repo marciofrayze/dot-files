@@ -6,8 +6,8 @@ syntax on
 color darkblue
 
 " Adiciona uma marcação na coluna 81, indicando que a linha está muito longa. 
-highlight ColorColumn ctermbg=gray 
-set colorcolumn=81
+highlight ColorColumn ctermbg=magenta 
+call matchadd('ColorColumn', '\%81v', 100)
 
 " Recarrega caso arquivo tenha sido alterado fora do vim.
 set autoread
