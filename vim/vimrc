@@ -9,6 +9,10 @@ color darkblue
 highlight ColorColumn ctermbg=magenta 
 call matchadd('ColorColumn', '\%81v', 100)
 
+" Destaca tabs e espaços no final das linha.
+exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
+set list
+
 " Recarrega caso arquivo tenha sido alterado fora do vim.
 set autoread
 
