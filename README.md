@@ -4,4 +4,4 @@
 
 Tmux
 
-Oh my zsh
+[Oh my zsh](/oh-my-zsh)
