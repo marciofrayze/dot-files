@@ -14,27 +14,27 @@ Plugins gerenciados pelo [Pathogen](https://github.com/tpope/vim-pathogen).
 
 ### Instalando todas as dependências
 
-`mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim  
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim  
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree  
 git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim  
 git clone https://github.com/artur-shaik/vim-javacomplete2.git ~/.vim/bundle/vim-javacomplete2  
 git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript  
 git clone https://github.com/posva/vim-vue.git ~/.vim/bundle/vim-vue  
 git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim  
-git clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim  `
+git clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim  
 
 ### Atualizando todas as dependências
-`curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim  
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim  
 cd ~/.vim/bundle/nerdtree && git pull  
 cd ~/.vim/bundle/typescript-vim && git pull  
 cd ~/.vim/bundle/vim-javacomplete2 && git pull  
 cd ~/.vim/bundle/vim-javascript && git pull  
 cd ~/.vim/bundle/vim-vue && git pull  
 cd ~/.vim/bundle/ctrlp.vim && git pull  
-cd ~/.vim/bundle/emmet-vim && git pull` 
+cd ~/.vim/bundle/emmet-vim && git pull
 
 ### Copiando ~/.vimrc
 
 **ATENÇÃO**: O COMANDO ABAIXO IRÁ SOBRESCREVER QUALQUER CONFIGURAÇÃO QUE TENHA SIDO FEITA EM SEU *~/.vimrc*
 
-`curl -LSso ~/.vim/vimrc https://raw.githubusercontent.com/mfdavid/dot-files/master/vim/vimrc`
+curl -LSso ~/.vim/vimrc https://raw.githubusercontent.com/mfdavid/dot-files/master/vim/vimrc
