@@ -1,7 +1,7 @@
 # .vimrc
 Minhas configurações para o editor vim ([~/.vimrc](vimrc)).
 
-Maioria dos plugins gerenciados pelo [Pathogen](https://github.com/tpope/vim-pathogen).
+Plugins gerenciados pelo [Pathogen](https://github.com/tpope/vim-pathogen).
 
 # Plugins utilizados
 - [nerdtree](https://github.com/scrooloose/nerdtree)
