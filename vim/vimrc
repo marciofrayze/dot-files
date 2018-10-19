@@ -3,7 +3,7 @@ execute pathogen#infect()
 
 " Highlighting e cores.
 syntax on
-color darkblue
+color industry
 
 " Adiciona uma marcação na coluna 81, indicando que a linha está muito longa. 
 highlight ColorColumn ctermbg=magenta 
