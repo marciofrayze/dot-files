@@ -32,3 +32,9 @@ cd ~/.vim/bundle/vim-javascript && git pull
 cd ~/.vim/bundle/vim-vue && git pull  
 cd ~/.vim/bundle/ctrlp.vim && git pull  
 cd ~/.vim/bundle/emmet-vim && git pull  
+
+### Copiando ~/.vimrc
+
+**ATENÇÃO**: O COMANDO ABAIXO IRÁ SOBRESCREVER QUALQUER CONFIGURAÇÃO QUE TENHA SIDO FEITA EM SEU *~/.vimrc*
+
+curl -LSso ~/.vim/vimrc https://raw.githubusercontent.com/mfdavid/dot-files/master/vim/vimrc
