@@ -37,4 +37,4 @@ cd ~/.vim/bundle/emmet-vim && git pull
 
 **ATENÇÃO**: O COMANDO ABAIXO IRÁ SOBRESCREVER QUALQUER CONFIGURAÇÃO QUE TENHA SIDO FEITA EM SEU *~/.vimrc*
 
-curl -LSso ~/.vim/vimrc https://raw.githubusercontent.com/mfdavid/dot-files/master/vim/vimrc
+curl -LSso ~/.vimrc https://raw.githubusercontent.com/mfdavid/dot-files/master/vim/vimrc
