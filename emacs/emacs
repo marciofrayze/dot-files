@@ -1,5 +1,8 @@
 (package-initialize)
 
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/"))
+
 (custom-set-variables
  '(blink-cursor-mode nil)
  '(custom-enabled-themes (quote (tango-dark)))
