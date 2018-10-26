@@ -25,13 +25,13 @@ git clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim
 
 ### Atualizando todas as dependências
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim  
-cd ~/.vim/bundle/nerdtree && git pull  
-cd ~/.vim/bundle/typescript-vim && git pull  
-cd ~/.vim/bundle/vim-javacomplete2 && git pull  
-cd ~/.vim/bundle/vim-javascript && git pull  
-cd ~/.vim/bundle/vim-vue && git pull  
-cd ~/.vim/bundle/ctrlp.vim && git pull  
-cd ~/.vim/bundle/emmet-vim && git pull
+git pull ~/.vim/bundle/nerdtree  
+git pull ~/.vim/bundle/nerdtree  
+git pull ~/.vim/bundle/vim-javacomplete2  
+git pull ~/.vim/bundle/vim-javascript  
+git pull ~/.vim/bundle/vim-vue  
+git pull ~/.vim/bundle/ctrlp.vim  
+git pull ~/.vim/bundle/emmet-vim  
 
 ### Copiando ~/.vimrc
 
