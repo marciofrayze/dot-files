@@ -1,7 +1,9 @@
-# Minhas configurações do vim, tmux e oh my zsh.
+# Minhas configurações do vim, emacs, oh my zsh e tmux.
+
+[emacs](/emacs)
 
 [Vim](/vim)
 
-Tmux
-
 [Oh my zsh](/oh-my-zsh)
+
+Tmux (em breve hehe)
