@@ -109,3 +109,7 @@ imap <f7> <plug>(javacomplete-imports-removeunused)
 
 " Configurando vim-airline (tabs).
 let g:airline#extensions#tabline#enabled = 1
+
+" Muda cor de fundo para um pouco mais clara quando estiver no modo insert.
+:au InsertEnter * hi Normal ctermbg=235
+:au InsertLeave * hi Normal ctermbg=black
