@@ -2,8 +2,8 @@
 
 [emacs](/emacs)
 
-[Vim](/vim)
+[vim](/vim)
 
-[Oh my zsh](/oh-my-zsh)
+[oh my zsh](/oh-my-zsh)
 
-Tmux (em breve hehe)
+tmux (em breve hehe)
