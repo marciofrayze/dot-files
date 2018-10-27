@@ -6,4 +6,4 @@
 
 [oh my zsh](/oh-my-zsh)
 
-tmux (em breve hehe)
+tmux (em breve)
