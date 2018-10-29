@@ -14,3 +14,5 @@
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 136 :width normal :foundry "DAMA" :family "Ubuntu Mono"))))
 
  '(custom-themed ((t nil))))
+
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
