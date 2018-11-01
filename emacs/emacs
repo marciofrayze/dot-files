@@ -23,5 +23,5 @@
 
 (setq elfeed-feeds
       '("https://www.martinfowler.com/feed.atom"
-        "http://planet.emacsen.org/atom.xml"
+	"http://planet.emacsen.org/atom.xml"
 	"http://feeds.macrumors.com/MacRumors-Front"))
