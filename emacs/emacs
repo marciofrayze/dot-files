@@ -16,3 +16,9 @@
  '(custom-themed ((t nil))))
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+(global-set-key (kbd "C-x w") 'elfeed)
+
+(setq elfeed-feeds
+      '("https://www.martinfowler.com/feed.atom"
+        "http://planet.emacsen.org/atom.xml"))
