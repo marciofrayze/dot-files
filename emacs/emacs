@@ -17,6 +17,8 @@
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+(setq org-html-postamble "<hr /><p>Última Atualização: %T</p><p>Criado com <label class=\"heart\"><3</label> no %c</p>")
+
 (global-set-key (kbd "C-x w") 'elfeed)
 
 (setq elfeed-feeds
