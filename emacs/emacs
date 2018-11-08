@@ -1,27 +1,37 @@
 (package-initialize)
 
+(require 'package)
+(add-to-list 'package-archives '("org-plus-contrib" . "https://orgmode.org/elpa/") t)
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/"))
+             '("melpa" . "https://melpa.org/packages/") t)
 
 (custom-set-variables
  '(blink-cursor-mode nil)
  '(custom-enabled-themes (quote (tango-dark)))
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
+ '(package-selected-packages
+   (quote
+    (w3m ox-html5slide org elfeed neotree vue-html-mode)))
  '(tool-bar-mode nil))
 
 (custom-set-faces
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 136 :width normal :foundry "DAMA" :family "Ubuntu Mono"))))
-
  '(custom-themed ((t nil))))
+
+(add-to-list 'load-path "/directory/containing/neotree/")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+(global-set-key (kbd "C-x r") 'elfeed)
+(setq elfeed-feeds
+      '("http://feeds.macrumors.com/MacRumors-All"
+	"https://martinfowler.com/feed.atom"
+        "http://planet.emacsen.org/atom.xml"))
+
 (setq org-html-postamble "<hr /><p>Última Atualização: %T</p><p>Criado com <label class=\"heart\"><3</label> no %c</p>")
 
-(global-set-key (kbd "C-x w") 'elfeed)
-
-(setq elfeed-feeds
-      '("https://www.martinfowler.com/feed.atom"
-	"http://planet.emacsen.org/atom.xml"
-	"http://feeds.macrumors.com/MacRumors-Front"))
+(setq w3m-default-display-inline-images t)
+(global-set-key (kbd "C-x w") 'w3m)
