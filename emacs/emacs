@@ -35,3 +35,5 @@
 
 (setq w3m-default-display-inline-images t)
 (global-set-key (kbd "C-x w") 'w3m)
+
+(setq dired-listing-switches "-alh")
