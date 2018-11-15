@@ -1,4 +1,4 @@
-# Minhas configurações do vim, emacs e tmux.
+# Minhas configurações do vim, emacs, oh-my-zsh and xmonad.
 
 [vim](/vim)
 
