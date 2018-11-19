@@ -8,4 +8,6 @@ plugins=(
    gradle
  ) 
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+
 source $ZSH/oh-my-zsh.sh
