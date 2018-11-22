@@ -37,3 +37,5 @@
 (global-set-key (kbd "C-x w") 'w3m)
 
 (setq dired-listing-switches "-alh")
+
+(setq visible-bell 1)
