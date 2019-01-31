@@ -11,24 +11,15 @@ Plugins gerenciados pelo [Pathogen](https://github.com/tpope/vim-pathogen).
 - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
 - [emmet-vim](https://github.com/mattn/emmet-vim)
 
-### Instalando todas as dependências
+### Instalando ou atualizando todas as dependências
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim  
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree  
-git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim  
-git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript  
-git clone https://github.com/posva/vim-vue.git ~/.vim/bundle/vim-vue  
-git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim  
-git clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim  
-
-### Atualizando todas as dependências
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim  
-cd ~/.vim/bundle/nerdtree && git pull && cd -  
-cd ~/.vim/bundle/typescript-vim && git pull && cd -  
-cd ~/.vim/bundle/vim-javascript && git pull && cd -  
-cd ~/.vim/bundle/vim-vue && git pull && cd -  
-cd ~/.vim/bundle/ctrlp.vim && git pull && cd -  
-cd ~/.vim/bundle/emmet-vim && git pull && cd -  
+git -C ~/.vim/bundle/nerdtree pull || git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree  
+git -C ~/.vim/bundle/typescript-vim pull || git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim  
+git -C ~/.vim/bundle/vim-javascript pull || git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript  
+git -C ~/.vim/bundle/vim-vue pull || git clone https://github.com/posva/vim-vue.git ~/.vim/bundle/vim-vue  
+git -C ~/.vim/bundle/ctrlp.vim pull || git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim  
+git -C ~/.vim/bundle/emmet-vim pull || git clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim  
 
 ### Copiando ~/.vimrc
 
