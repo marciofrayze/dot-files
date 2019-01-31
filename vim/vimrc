@@ -96,17 +96,6 @@ set tabstop=2
 " F10 para habilitar ou desabilitar modo paste.
 set pastetoggle=<F10> 
 
-" Configurando Java (plugin ~/.vim/bundle/javacomplete2).
-autocmd filetype java setlocal omnifunc=javacomplete#complete
-nmap <f4> <plug>(javacomplete-imports-addsmart)
-imap <f4> <plug>(javacomplete-imports-addsmart)
-nmap <f5> <plug>(javacomplete-imports-add)
-imap <f5> <plug>(javacomplete-imports-add)
-nmap <f6> <plug>(javacomplete-imports-addmissing)
-imap <f6> <plug>(javacomplete-imports-addmissing)
-nmap <f7> <plug>(javacomplete-imports-removeunused)
-imap <f7> <plug>(javacomplete-imports-removeunused)
-
 " Configurando vim-airline (tabs).
 let g:airline#extensions#tabline#enabled = 1
 
