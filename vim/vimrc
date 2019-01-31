@@ -24,13 +24,12 @@ set wildmode=longest:list,full
 set showmatch
 set mat=2
 
-
 " Muda cor de fundo para um pouco mais clara quando estiver no modo insert.
 :au InsertEnter * hi Normal ctermbg=235
 :au InsertLeave * hi Normal ctermbg=black
 
 " Remove toolbar no gvim
-107 set guioptions-=T
+set guioptions-=T
 
 " Configurando nerdtree e o exibe caso nenhum arquivo tenha sido aberto.
 autocmd StdinReadPre * let s:std_in=1
