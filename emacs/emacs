@@ -42,3 +42,5 @@
 
 (require 'fill-column-indicator) 
 (setq fci-rule-width 1)
+
+(delete-selection-mode 1)
