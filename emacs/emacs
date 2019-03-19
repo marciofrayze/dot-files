@@ -47,4 +47,4 @@
 
 (require 'smooth-scrolling)
 (smooth-scrolling-mode 1)
-(setq smooth-scroll-margin 5)
+(setq smooth-scroll-margin 7)
