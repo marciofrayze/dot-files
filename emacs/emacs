@@ -44,3 +44,7 @@
 (setq fci-rule-width 1)
 
 (delete-selection-mode 1)
+
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
+(setq smooth-scroll-margin 5)
