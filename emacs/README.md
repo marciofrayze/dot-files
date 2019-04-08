@@ -6,9 +6,9 @@ Minhas configurações para o editor emacs ([~/.emacs](emacs)).
 - neotree
 - smooth-scrolling
 - projectile
-- company
-- elm-mode
+- company-ghc
 - haskell-mode
+- elm-mode
 
 Para instalar estes pacotes deve-se configurar primeiro o *.emacs* conforme abaixo e em seguida executar *M^x package-refresh-contents*.
 
