@@ -52,3 +52,16 @@
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-o") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+(require 'elm-mode)
+(add-hook 'after-init-hook 'global-company-mode)
+
+(eval-after-load "haskell-mode"
+    '(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile))
+
+(eval-after-load "haskell-cabal"
+    '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
+
+(require 'flycheck)
+(with-eval-after-load 'flycheck
+      '(add-hook 'flycheck-mode-hook #'flycheck-elm-setup))
