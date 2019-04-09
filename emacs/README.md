@@ -12,6 +12,9 @@ Minhas configurações para o editor emacs ([~/.emacs](emacs)).
 
 Para instalar estes pacotes deve-se configurar primeiro o *.emacs* conforme abaixo e em seguida executar *M^x package-refresh-contents*.
 
+### Pacotes instalados via cabal
+- cabal install happy hasktags
+
 ### Copiando ~/.emacs
 
 **ATENÇÃO**: O COMANDO ABAIXO IRÁ SOBRESCREVER QUALQUER CONFIGURAÇÃO QUE TENHA SIDO FEITA EM SEU *~/.emacs*
