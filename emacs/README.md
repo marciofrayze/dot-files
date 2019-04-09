@@ -15,6 +15,9 @@ Para instalar estes pacotes deve-se configurar primeiro o *.emacs* conforme abai
 ### Pacotes instalados via cabal
 - cabal install happy hasktags stylish-haskell present
 
+### Pacotes instalados via stack
+- stack install hindent
+
 ### Copiando ~/.emacs
 
 **ATENÇÃO**: O COMANDO ABAIXO IRÁ SOBRESCREVER QUALQUER CONFIGURAÇÃO QUE TENHA SIDO FEITA EM SEU *~/.emacs*
