@@ -9,6 +9,7 @@ Minhas configurações para o editor emacs ([~/.emacs](emacs)).
 - company-ghc
 - haskell-mode
 - elm-mode
+- web-mode
 
 Para instalar estes pacotes deve-se configurar primeiro o *.emacs* conforme abaixo e em seguida executar *M^x package-refresh-contents*.
 
