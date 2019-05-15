@@ -10,6 +10,7 @@ Minhas configurações para o editor emacs ([~/.emacs](emacs)).
 - haskell-mode
 - elm-mode
 - web-mode
+- flymake-shellcheck
 
 Para instalar estes pacotes deve-se configurar primeiro o *.emacs* conforme abaixo e em seguida executar *M^x package-refresh-contents*.
 
