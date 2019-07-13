@@ -12,6 +12,7 @@ Minhas configurações para o editor emacs ([~/.emacs](emacs)).
 - web-mode
 - flymake-shellcheck
 - fill-column-indicator
+- flycheck
 
 Para instalar estes pacotes deve-se configurar primeiro o *.emacs* conforme abaixo e em seguida executar *M^x package-refresh-contents*.
 
