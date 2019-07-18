@@ -31,6 +31,7 @@
 	"https://martinfowler.com/feed.atom"
         "http://planet.emacsen.org/atom.xml"))
 
+(require 'ox-rss)
 (setq org-html-postamble "<hr /><p>Última Atualização: %T</p><p>Criado com <label class=\"heart\"><3</label> no %c</p>")
 
 (setq w3m-default-display-inline-images t)
