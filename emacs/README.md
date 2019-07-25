@@ -20,7 +20,7 @@ Para instalar estes pacotes deve-se configurar primeiro o *.emacs* conforme abai
 - cabal install happy hasktags stylish-haskell present
 
 ### Pacotes instalados via stack
-- stack install hindent
+- stack install hindent hlint
 
 ### Copiando ~/.emacs
 
