@@ -18,7 +18,7 @@ Minhas configurações para o editor emacs ([~/.emacs](emacs)).
 Para instalar estes pacotes deve-se configurar primeiro o *.emacs* conforme abaixo e em seguida executar *M^x package-refresh-contents*.
 
 ### Pacotes instalados via stack
-- stack install happy hasktags stylish-haskell present hindent hlint apply-refact
+- stack install happy hasktags stylish-haskell present hindent hlint apply-refact ghcid
 
 ### Copiando ~/.emacs
 
