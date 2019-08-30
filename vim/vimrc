@@ -1,5 +1,13 @@
-" Inicializando o Pathogen. Utilizado para facilitar a gestão de plugins.
-execute pathogen#infect()
+" Configurando vim-plug para gestão de plugins.
+call plug#begin()
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+Plug 'thosakwe/vim-flutter'
+call plug#end()
 
 " Highlighting e cores.
 syntax on
@@ -16,7 +24,7 @@ set list
 " Deixa 7 linhas acima e abaixo quando estiver movendo com j e k.
 set so=7
 
-" Configurações do wildmenu (auto completar o tab de forma mais eficiência/visual).
+" Configurações do wildmenu (auto completar o tab mais eficiência/visual).
 set wildmenu
 set wildmode=longest:list,full
 
@@ -25,8 +33,8 @@ set showmatch
 set mat=2
 
 " Muda cor de fundo para um pouco mais clara quando estiver no modo insert.
-:au InsertEnter * hi Normal ctermbg=235
-:au InsertLeave * hi Normal ctermbg=black
+" :au InsertEnter * hi Normal ctermbg=235
+" :au InsertLeave * hi Normal ctermbg=black
 
 " Remove toolbar no gvim
 set guioptions-=T
@@ -86,7 +94,6 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 " Plugin de busca (ctr + p).
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'  
 
 " Exibir número da linha corrente.
@@ -105,3 +112,10 @@ set pastetoggle=<F10>
 
 " Configurando vim-airline (tabs).
 let g:airline#extensions#tabline#enabled = 1
+
+" Configurando atalhos para o flutter.
+nnoremap <leader>fa :FlutterRun<cr>
+nnoremap <leader>fq :FlutterQuit<cr>
+nnoremap <leader>fr :FlutterHotReload<cr>
+nnoremap <leader>fR :FlutterHotRestart<cr>
+nnoremap <leader>fD :FlutterVisualDebug<cr>
