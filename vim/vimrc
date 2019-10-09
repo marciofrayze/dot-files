@@ -9,6 +9,7 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'natebosch/vim-lsc'
 Plug 'natebosch/vim-lsc-dart'
 Plug 'thosakwe/vim-flutter'
+Plug 'elmcast/elm-vim'
 call plug#end()
 
 " Highlighting e cores.
