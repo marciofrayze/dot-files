@@ -3,13 +3,18 @@ call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'tpope/vim-fugitive'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'natebosch/vim-lsc'
 Plug 'natebosch/vim-lsc-dart'
 Plug 'thosakwe/vim-flutter'
-Plug 'elmcast/elm-vim'
+Plug 'andys8/vim-elm-syntax', { 'for': ['elm'] }
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'alvan/vim-closetag'
+Plug 'google/vim-searchindex'
 call plug#end()
 
 " Highlighting e cores.
@@ -35,16 +40,13 @@ set wildmode=longest:list,full
 set showmatch
 set mat=2
 
-" Muda cor de fundo para um pouco mais clara quando estiver no modo insert.
-" :au InsertEnter * hi Normal ctermbg=235
-" :au InsertLeave * hi Normal ctermbg=black
-
 " Remove toolbar no gvim
 set guioptions-=T
 
 " Configurando nerdtree e o exibe caso nenhum arquivo tenha sido aberto.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let g:NERDTreeWinPos = "right"
 " Mapeia o C-n para abri-lo.
 map <C-n> :NERDTreeToggle<CR>
 " Fecha o vim caso feche demais buffers e sobre apenas o nerdtree.
@@ -117,11 +119,32 @@ set pastetoggle=<F10>
 let g:airline#extensions#tabline#enabled = 1
 
 " Configurando atalhos para o flutter.
-nnoremap <leader>fa :FlutterRun<cr>
+nnoremap <leader>fa :FlutterRun --release --flavor dev -t lib/main_dev.dart<cr>
 nnoremap <leader>fq :FlutterQuit<cr>
 nnoremap <leader>fr :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
 
-" Habilitando vim-lsc.
-let g:lsc_auto_map = v:true
+let g:ctrlp_root_markers = ['.ctrlp']
+
+" Configurando vim-lsc.
+let g:lsc_auto_map = {
+    \ 'GoToDefinition': '<C-]>',
+    \ 'GoToDefinitionSplit': ['<C-W>]', '<C-W><C-]>'],
+    \ 'FindReferences': 'gr',
+    \ 'NextReference': '<C-n>',
+    \ 'FindImplementations': 'gI',
+    \ 'FindCodeActions': 'ga',
+    \ 'Rename': 'gR',
+    \ 'ShowHover': v:true,
+    \ 'DocumentSymbol': 'go',
+    \ 'WorkspaceSymbol': 'gS',
+    \ 'SignatureHelp': 'gm',
+    \ 'Completion': 'completefunc',
+    \}
+
+" Melhorando visualizacao de mensagens de erro
+set cmdheight=3
+
+" Configurando coc
+nmap <leader>rn <Plug>(coc-rename)
