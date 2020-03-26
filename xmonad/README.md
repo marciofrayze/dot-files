@@ -4,7 +4,7 @@ Minhas configurações para o window manager xmonad ([~/.xmonad/xmonad.hs](xmona
 # Instalando Xmonad via cabal
 cabal update  
 cabal install xmonad  
-cabal install xmonad-contrib (opcional)
+cabal install xmonad-contrib --flags=\"-use_xft\"
 
 # Configurando GDM3 para iniciar no Xmonad
 Criar novo arquivo: /usr/share/xsessions/xmonad.desktop  
