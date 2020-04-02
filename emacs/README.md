@@ -1,6 +1,10 @@
 # .emacs
 Minhas configurações para o editor emacs ([~/.emacs](emacs)).
 
+**ATENÇÃO: configurações depreciadas**  
+  
+Não estou mais utilizando emacs no momento. Migrei para o vim/neovim/spacevim.
+
 ### Pacotes instalados via M^x package-install
 - elfeed
 - neotree
