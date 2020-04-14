@@ -31,6 +31,7 @@ Run ```:CocConfig``` then paste:
       }
     }
   }
+}
 ```
 
 ### Java
