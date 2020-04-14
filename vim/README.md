@@ -10,7 +10,7 @@ Após configurar o arquivo ~/.vimrs conforme exemplo, entre no `vim` e execute o
 
 **ATENÇÃO**: O COMANDO ABAIXO IRÁ SOBRESCREVER QUALQUER CONFIGURAÇÃO QUE TENHA SIDO FEITA EM SEU *~/.vimrc*
 
-curl -LSso ~/.vimrc https://raw.githubusercontent.com/mfdavid/dot-files/master/vim/vimrc
+curl -LSso ~/.vimrc https://raw.githubusercontent.com/marciofrayze/dot-files/master/vim/vimrc
 
 ### Elm
 
