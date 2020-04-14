@@ -15,4 +15,20 @@ curl -LSso ~/.vimrc https://raw.githubusercontent.com/mfdavid/dot-files/master/v
 ### Elm
 
 Plugin do Elm considera que tenha instalado:  
-`npm install -g elm elm-test elm-oracle elm-format`
+`npm install -g elm elm-test elm-oracle elm-format @elm-tooling/elm-language-server`
+
+Run ```:CocConfig``` then paste:
+
+```
+{
+  "languageserver": {
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
+      "initializationOptions": {
+        "elmAnalyseTrigger": "change"
+      }
+    }
+  }
+```
