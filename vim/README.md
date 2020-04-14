@@ -14,10 +14,10 @@ curl -LSso ~/.vimrc https://raw.githubusercontent.com/mfdavid/dot-files/master/v
 
 ### Elm
 
-Plugin do Elm considera que tenha instalado:  
+Plugins para utilizar Elm consideram que você tenha instalado:  
 `npm install -g elm elm-test elm-oracle elm-format @elm-tooling/elm-language-server`
 
-Run ```:CocConfig``` then paste:
+Execute ```:CocConfig``` e cole:
 
 ```
 {
