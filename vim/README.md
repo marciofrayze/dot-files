@@ -40,4 +40,4 @@ Além da JDK instalada e configurada, é necessário ter baixado o [Eclipse](htt
 
 ### Flutter
 
-Execute ```:CocInstall coc-flutter```.
+Execute: ```:CocInstall coc-flutter```
