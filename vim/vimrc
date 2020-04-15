@@ -44,9 +44,6 @@ set mat=2
 " Remove toolbar no gvim.
 set guioptions-=T
 
-" Destaca resultado de busca.
-set hlsearch
-
 " Recarrega caso arquivo tenha sido alterado fora do vim.
 set autoread
 
