@@ -38,4 +38,6 @@ Execute ```:CocConfig``` e cole:
 
 Além da JDK instalada e configurada, é necessário ter baixado o [Eclipse](https://eclipse.org) e o [eclimd](http://eclim.org/install.html#installing-upgrading) e iniciado o servidor ```eclimd```iniciado.
 
-Após isso, execute o comando ```:CocInstall coc-java```
+### Flutter
+
+Execute ```:CocInstall coc-flutter```.
