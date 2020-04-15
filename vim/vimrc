@@ -7,35 +7,31 @@ endif
 call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
-Plug 'MattesGroeger/vim-bookmarks'
 Plug 'tpope/vim-fugitive'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'natebosch/vim-lsc'
 Plug 'natebosch/vim-lsc-dart'
 Plug 'thosakwe/vim-flutter'
+Plug 'elm-tooling/elm-language-server'
+Plug 'elm-tooling/elm-vim'
+Plug 'janko/vim-test'
 Plug 'andys8/vim-elm-syntax', { 'for': ['elm'] }
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'alvan/vim-closetag'
 Plug 'google/vim-searchindex'
+Plug 'junegunn/goyo.vim'
+Plug 'dansomething/vim-eclim'
+Plug 'ervandew/supertab'
 call plug#end()
 
 " Highlighting e cores.
 syntax on
 color industry
 
-" Adiciona uma marcação na coluna 81, indicando que a linha está muito longa. 
-highlight ColorColumn ctermbg=magenta 
-call matchadd('ColorColumn', '\%81v', 100)
-
 " Destaca tabs e espaços no final das linha.
 exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
 set list
-
-" Deixa 7 linhas acima e abaixo quando estiver movendo com j e k.
-set so=7
 
 " Configurações do wildmenu (auto completar o tab mais eficiência/visual).
 set wildmenu
@@ -45,35 +41,14 @@ set wildmode=longest:list,full
 set showmatch
 set mat=2
 
-" Remove toolbar no gvim
+" Remove toolbar no gvim.
 set guioptions-=T
-
-" Configurando nerdtree e o exibe caso nenhum arquivo tenha sido aberto.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-let g:NERDTreeWinPos = "right"
-" Mapeia o C-n para abri-lo.
-map <C-n> :NERDTreeToggle<CR>
-" Fecha o vim caso feche demais buffers e sobre apenas o nerdtree.
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Destaca resultado de busca.
 set hlsearch
 
 " Recarrega caso arquivo tenha sido alterado fora do vim.
 set autoread
-
-" Desabilita as setas (útil para perder o hábito de usa-las).
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
-" Atalho (nt) para criar nova tab.
- nnoremap nt :tabnew<CR>
-
-" Ao realizar uma busca, quando chegar ao fim, não volte ao começo.
-set nowrapscan
 
 " Usar por padrão o clipboard para copiar de texto.
 if has("clipboard")
@@ -104,11 +79,11 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 " Plugin de busca (ctr + p).
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'  
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-" Exibir número da linha corrente.
+" Exibir número da linha corrente e relativas.
+set relativenumber
 set number
-set ruler
 
 " Tabs e indentação.
 set autoindent
@@ -116,9 +91,6 @@ set smartindent
 set shiftwidth=2
 set expandtab
 set tabstop=2
-
-" F10 para habilitar ou desabilitar modo paste.
-set pastetoggle=<F10> 
 
 " Configurando vim-airline (tabs).
 let g:airline#extensions#tabline#enabled = 1
@@ -148,12 +120,23 @@ let g:lsc_auto_map = {
     \ 'Completion': 'completefunc',
     \}
 
-" Melhorando visualizacao de mensagens de erro
+" Melhorando visualizacao de mensagens de erro.
 set cmdheight=3
 
-" Configurando coc
+" Configurando coc.
 nmap <leader>rn <Plug>(coc-rename)
 
-" Spell
+" Spelling.
 autocmd BufRead,BufNewFile *.txt setlocal spell spelllang=pt_br
 set complete+=kspell
+
+" Configurando Java.
+let g:EclimFileTypeValidate = 1
+
+" Autocomplete com tab.
+let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabClosePreviewOnPopupClose = 1
+
+" Removendo cabeçalho do netrw.
+let g:netrw_banner = 0
+let g:netrw_list_hide= '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=,.\$'
