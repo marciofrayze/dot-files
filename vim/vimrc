@@ -80,6 +80,7 @@ set ffs=unix,dos,mac
 
 " Plugin de busca (ctr + p).
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_root_markers = ['.ctrlp']
 
 " Exibir número da linha corrente e relativas.
 set relativenumber
@@ -101,8 +102,6 @@ nnoremap <leader>fq :FlutterQuit<cr>
 nnoremap <leader>fr :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
-
-let g:ctrlp_root_markers = ['.ctrlp']
 
 " Configurando vim-lsc.
 let g:lsc_auto_map = {
