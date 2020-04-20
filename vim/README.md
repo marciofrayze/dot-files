@@ -30,7 +30,8 @@ Execute ```:CocConfig``` e cole:
         "elmAnalyseTrigger": "change"
       }
     }
-  }
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["elm"]
 }
 ```
 
