@@ -133,6 +133,8 @@ let g:EclimFileTypeValidate = 1
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabClosePreviewOnPopupClose = 1
 
-" Removendo cabeçalho do netrw.
+" Removendo cabeçalho do netrr
 let g:netrw_banner = 0
-let g:netrw_list_hide= '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=,.\$'
+" Não exibir arquivos ignorados pelo git, pasta atual e anterior e mais alguns
+" customizados.
+let g:netrw_list_hide= netrw_gitignore#Hide() . '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=,.\$'
