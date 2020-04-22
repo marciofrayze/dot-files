@@ -23,6 +23,7 @@ Plug 'google/vim-searchindex'
 Plug 'junegunn/goyo.vim'
 Plug 'dansomething/vim-eclim'
 Plug 'ervandew/supertab'
+Plug 'will133/vim-dirdiff'
 call plug#end()
 
 " Highlighting e cores.
