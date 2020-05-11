@@ -42,6 +42,8 @@ Além da JDK instalada e configurada, é necessário ter baixado o [Eclipse](htt
 Então importe o projeto (caso ele já seja um projeto eclipse) com: ```:ProjectImport <PATH_COMPLETO>```  
 Ou crie um novo projeto eclipse com: ```:ProjectCreate <PATH_COMPLETO> -n java```
 
+Para corrigir um erro no código (faltando throws ou faltando implementar um método): ```:JavaCorrect```   
+
 ### Flutter
 
 Execute: ```:CocInstall coc-flutter```
