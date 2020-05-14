@@ -43,6 +43,7 @@ Então importe o projeto (caso ele já seja um projeto eclipse) com: ```:Project
 Ou crie um novo projeto eclipse com: ```:ProjectCreate <PATH_COMPLETO> -n java```
 
 Para corrigir um erro no código (faltando throws ou faltando implementar um método): ```:JavaCorrect```   
+Para criar uma nova classe no mesmo pacote do arquivo sendo editado atualmente: ```:JavaNew class <NomeDaClasse>```   
 
 ### Flutter
 
