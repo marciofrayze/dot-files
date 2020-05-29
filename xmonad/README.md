@@ -6,20 +6,18 @@ cabal update
 cabal install xmonad  
 cabal install xmonad-contrib --flags=\"-use_xft\"
 
-# Configurando GDM3 para iniciar no Xmonad
+# Configurando GDM3/LightDM para iniciar no Xmonad
 Criar novo arquivo: /usr/share/xsessions/xmonad.desktop  
 ```
 [Desktop Entry]
-Type=Application
-Encoding=UTF-8
-Name=Xmonad
-Exec=/home/30723401888/.cabal/bin/xmonad
-NoDisplay=true
-X-GNOME-WMName=Xmonad
-X-GNOME-Autostart-Phase=WindowManager
-X-GNOME-Provides=windowmanager
-X-GNOME-Autostart-Notify=false
+Name=XMonad
+Comment=Lightweight tiling window manager
+Exec=xmonad-session
+Icon=xmonad.png
+Type=XSession
 ```
+
+Habilitando natural scrolling: ```synclient VertScrollDelta=-78```
 
 Mais informações em: https://wiki.haskell.org/Xmonad/Basic_Desktop_Environment_Integration
 
