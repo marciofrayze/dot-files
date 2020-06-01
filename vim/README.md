@@ -15,7 +15,10 @@ curl -LSso ~/.vimrc https://raw.githubusercontent.com/marciofrayze/dot-files/mas
 ### Elm
 
 Plugins para utilizar Elm consideram que você tenha instalado:  
-`npm install -g elm elm-test elm-oracle elm-format @elm-tooling/elm-language-server`
+No Linux: `npm install -g elm elm-test elm-oracle elm-format @elm-tooling/elm-language-server`  
+No FreeBSD:  
+`pkg install hs-elm-format`  
+`npm install -g elm elm-test elm-oracle @elm-tooling/elm-language-server`
 
 Execute ```:CocConfig``` e cole:
 
