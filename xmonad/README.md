@@ -2,7 +2,7 @@
 Minhas configurações para o window manager xmonad ([~/.xmonad/xmonad.hs](xmonad.hs)).
 
 # Instalando Xmonad (e xmobar) via cabal
-sudo apt-get install libxrandr-dev libxss-dev
+sudo apt-get install libxrandr-dev libxss-dev suckless-tools
 cabal update  
 cabal install xmonad  
 cabal install xmonad-contrib --flags=\"-use_xft\"
