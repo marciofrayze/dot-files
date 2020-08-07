@@ -1,10 +1,12 @@
 # xmonad.hs
 Minhas configurações para o window manager xmonad ([~/.xmonad/xmonad.hs](xmonad.hs)).
 
-# Instalando Xmonad via cabal
+# Instalando Xmonad (e xmobar) via cabal
+sudo apt-get install libxrandr-dev libxss-dev
 cabal update  
 cabal install xmonad  
 cabal install xmonad-contrib --flags=\"-use_xft\"
+cabal install xmobar
 
 # Configurando GDM3/LightDM para iniciar no Xmonad
 Criar novo arquivo: /usr/share/xsessions/xmonad.desktop  
@@ -17,7 +19,7 @@ Icon=xmonad.png
 Type=XSession
 ```
 
-Habilitando natural scrolling: ```synclient VertScrollDelta=-78```
+Habilitando natural scrolling no trackpad: ```synclient VertScrollDelta=-78```
 
 Mais informações em: https://wiki.haskell.org/Xmonad/Basic_Desktop_Environment_Integration
 
