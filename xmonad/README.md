@@ -8,7 +8,7 @@ cabal install xmonad
 cabal install xmonad-contrib --flags=\"-use_xft\"
 cabal install xmobar
 
-# Configurando GDM3/LightDM para iniciar no Xmonad
+# Configurando GDM3 para iniciar no Xmonad
 Criar novo arquivo: /usr/share/xsessions/xmonad.desktop  
 ```
 [Desktop Entry]
