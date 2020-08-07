@@ -10,8 +10,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'dart-lang/dart-vim-plugin'
-Plug 'natebosch/vim-lsc'
-Plug 'natebosch/vim-lsc-dart'
 Plug 'thosakwe/vim-flutter'
 Plug 'elm-tooling/elm-language-server'
 Plug 'elm-tooling/elm-vim'
@@ -24,6 +22,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'dansomething/vim-eclim'
 Plug 'ervandew/supertab'
 Plug 'will133/vim-dirdiff'
+Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Highlighting e cores.
@@ -101,27 +102,22 @@ nnoremap <leader>fr :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
 
-" Configurando vim-lsc.
-let g:lsc_auto_map = {
-    \ 'GoToDefinition': '<C-]>',
-    \ 'GoToDefinitionSplit': ['<C-W>]', '<C-W><C-]>'],
-    \ 'FindReferences': 'gr',
-    \ 'NextReference': '<C-n>',
-    \ 'FindImplementations': 'gI',
-    \ 'FindCodeActions': 'ga',
-    \ 'Rename': 'gR',
-    \ 'ShowHover': v:true,
-    \ 'DocumentSymbol': 'go',
-    \ 'WorkspaceSymbol': 'gS',
-    \ 'SignatureHelp': 'gm',
-    \ 'Completion': 'completefunc',
-    \}
-
 " Melhorando visualizacao de mensagens de erro.
 set cmdheight=3
 
 " Configurando coc.
 nmap <leader>rn <Plug>(coc-rename)
+" Apply AutoFix to problem on the current line.
+nmap <leader>af <Plug>(coc-fix-current)
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Spelling.
 autocmd BufRead,BufNewFile *.txt setlocal spell spelllang=pt_br
@@ -134,8 +130,17 @@ let g:EclimFileTypeValidate = 1
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabClosePreviewOnPopupClose = 1
 
-" Removendo cabeçalho do netrr
+" Removendo cabeçalho do netrr.
 let g:netrw_banner = 0
-" Não exibir arquivos ignorados pelo git, pasta atual e anterior e mais alguns
-" customizados.
-let g:netrw_list_hide= netrw_gitignore#Hide() . '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=,.\$'
+
+" Importa e organiza ao salvar arquivos .java.
+autocmd BufWritePre *.java :JavaImportOrganize
+
+" Persistindo undo.
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000
+set undoreload=10000
+
+" Coc explorer (instalar antes usando :CocInstall coc-explorer)
+:nmap <space>e :CocCommand explorer<CR>
