@@ -48,6 +48,9 @@ Ou crie um novo projeto eclipse com: ```:ProjectCreate <PATH_COMPLETO> -n java``
 Para corrigir um erro no código (faltando throws ou faltando implementar um método): ```:JavaCorrect```   
 Para criar uma nova classe no mesmo pacote do arquivo sendo editado atualmente: ```:JavaNew class <NomeDaClasse>```   
 
+Caso receba o erro __*vim coc the java server crashed 5 times*__, limpe o workspace com o comando:
+```:CocCommand java.clean.workspace```
+
 ### Flutter
 
 Execute: ```:CocInstall coc-flutter```
