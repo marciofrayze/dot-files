@@ -30,6 +30,7 @@ call plug#end()
 " Highlighting e cores.
 syntax on
 color industry
+:highlight Pmenu ctermbg=gray guibg=gray
 
 " Destaca tabs e espaços no final das linha.
 exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
