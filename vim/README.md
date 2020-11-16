@@ -20,24 +20,6 @@ No FreeBSD:
 `pkg install hs-elm-format`  
 `npm install -g elm elm-test elm-oracle @elm-tooling/elm-language-server`
 
-Execute ```:CocConfig``` e cole:
-
-```
-{
-  "languageserver": {
-    "elmLS": {
-      "command": "elm-language-server",
-      "filetypes": ["elm"],
-      "rootPatterns": ["elm.json"],
-      "initializationOptions": {
-        "elmAnalyseTrigger": "change"
-      }
-    }
-  },
-  "coc.preferences.formatOnSaveFiletypes": ["elm"]
-}
-```
-
 ### Java
 
 Além da JDK instalada e configurada, é necessário ter baixado o [Eclipse](https://eclipse.org) e o [eclimd](http://eclim.org/install.html#installing-upgrading) e iniciado o servidor ```eclimd```iniciado.
@@ -54,3 +36,44 @@ Caso receba o erro __*vim coc the java server crashed 5 times*__, limpe o worksp
 ### Flutter
 
 Execute: ```:CocInstall coc-flutter```
+
+### Coc Config
+
+My configurations for coc config (Java, Elm, etc):
+
+Execute ```:CocConfig``` e cole:
+
+```
+{
+  "languageserver": {
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
+      "initializationOptions": {
+        "elmAnalyseTrigger": "change"
+      }
+    },
+    "dart": {
+      "command": "dart_language_server",
+      "args": [],
+      "trace.server": "verbose",
+      "filetypes": ["dart"],
+      "initializationOptions": {},
+      "settings": {
+        "dart": {
+          "validation": {},
+          "completion": {}
+        }
+      }
+    }
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["elm", "dart", "java"],
+  "explorer.icon.enableNerdfont": true,
+  "java.import.gradle.enabled": true,
+  "java.import.maven.enabled": true,
+  "java.autobuild.enabled": true,
+  "java.jdt.ls.vmargs": "-Dfile.encoding=UTF-8"
+}
+
+```
