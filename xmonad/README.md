@@ -5,7 +5,7 @@ Minhas configurações para o window manager xmonad ([~/.xmonad/xmonad.hs](xmona
 sudo apt-get install libxrandr-dev libxss-dev suckless-tools  
 cabal update  
 cabal install xmonad  
-cabal install xmonad-contrib --flags=\"-use_xft\"
+cabal install xmonad-contrib --flags=\"-use_xft\"  
 cabal install xmobar
 
 # Configurando GDM3 para iniciar no Xmonad
