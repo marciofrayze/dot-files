@@ -87,7 +87,7 @@ e provavelmente várias outras que eu não documentei... desculpe :)
 Limpando caso tenha compilado previamente: `make distclean`  
 Configurando:  
 `./configure --with-features=huge --enable-multibyte --enable-gui=auto --enable-gtk2-check --enable-gtk3-check --enable-gnome-check --enable-cscope                 --enable-largefile --enable-pythoninterp=dynamic --with-python-config-dir=$(python-config --configdir)  --enable-python3interp=dynamic --with-python3-config-dir=$(python3-config --configdir) --enable-perlinterp --enable-rubyinterp=dynamic --enable-luainterp=dynamic --with-luajit --with-x --with-compiledby="Marcio Frayze David <marcio@segunda.tech>" --enable-fail-if-missing
-`
+`  
 Compilando:  `sudo make install`  
 
 Divirta-se!
