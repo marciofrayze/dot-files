@@ -77,3 +77,17 @@ Execute ```:CocConfig``` e cole:
 }
 
 ```
+
+# Compiling vim from source (raspberry pi)
+
+`git clone https://github.com/vim/vim.git`  
+Install dependencies:  
+`sudo apt-get install libperl-dev`  
+and probably a lot more... sorry :)  
+Clear if already if compiled it before: `make distclean`  
+Configure:  
+`./configure --with-features=huge --enable-multibyte --enable-gui=auto --enable-gtk2-check --enable-gtk3-check --enable-gnome-check --enable-cscope                 --enable-largefile --enable-pythoninterp=dynamic --with-python-config-dir=$(python-config --configdir)  --enable-python3interp=dynamic --with-python3-config-dir=$(python3-config --configdir) --enable-perlinterp --enable-rubyinterp=dynamic --enable-luainterp=dynamic --with-luajit --with-x --with-compiledby="Marcio Frayze David <marcio@segunda.tech>" --enable-fail-if-missing
+`
+Compile:  `sudo make install`  
+
+Have fun!
