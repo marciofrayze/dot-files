@@ -22,7 +22,7 @@ No FreeBSD:
 
 ### Java
 
-Além da JDK instalada e configurada, é necessário ter baixado o [Eclipse](https://eclipse.org) e o [eclimd](http://eclim.org/install.html#installing-upgrading) e iniciado o servidor ```eclimd```iniciado.
+Além da JDK instalada e configurada, é necessário ter baixado o [Eclipse](https://eclipse.org) e o [eclimd](http://eclim.org/install.html#installing-upgrading) e iniciado o servidor ```eclimd```.
 
 Além disso, é necessário ter o coc-java instalado, executando: `:CocInstall coc-java`.
 
