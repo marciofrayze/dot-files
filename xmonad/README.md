@@ -2,13 +2,13 @@
 Minhas configurações para o window manager xmonad ([~/.xmonad/xmonad.hs](xmonad.hs)).
 
 # Instalando Xmonad (e xmobar) via cabal
-sudo apt-get install libxrandr-dev libxss-dev
+sudo apt-get install libxrandr-dev libxss-dev suckless-tools  
 cabal update  
 cabal install xmonad  
-cabal install xmonad-contrib --flags=\"-use_xft\"
+cabal install xmonad-contrib --flags=\"-use_xft\"  
 cabal install xmobar
 
-# Configurando GDM3/LightDM para iniciar no Xmonad
+# Configurando GDM3 para iniciar no Xmonad
 Criar novo arquivo: /usr/share/xsessions/xmonad.desktop  
 ```
 [Desktop Entry]

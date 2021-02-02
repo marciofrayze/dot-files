@@ -28,6 +28,7 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " Highlighting e cores.
