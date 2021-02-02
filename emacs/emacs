@@ -1,68 +1,86 @@
-(package-initialize)
-
 (require 'package)
-(add-to-list 'package-archives '("org-plus-contrib" . "https://orgmode.org/elpa/") t)
+
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 
+(package-initialize)
+;; (package-refresh-contents)
+
+;; Download packages
+(unless (package-installed-p 'evil)            ;; vim binding support
+  (package-install 'evil))
+(unless (package-installed-p 'elm-mode)        ;; elm lang support <3
+  (package-install 'elm-mode))
+(unless (package-installed-p 'lsp-java)        ;; java support
+  (package-install 'lsp-java))
+(unless (package-installed-p 'undo-fu)         ;; redo for evil
+  (package-install 'undo-fu))
+(unless (package-installed-p 'magit)           ;; git client
+  (package-install 'magit))
+(unless (package-installed-p 'evil-collection) ;; without this, magit does not play well with evil mode
+  (package-install 'evil-collection))
+(unless (package-installed-p 'elfeed)          ;; rss client
+  (package-install 'elfeed))
+(unless (package-installed-p 'neotree)         ;; file tree
+  (package-install 'neotree))
+(unless (package-installed-p 'erc)             ;; irc client
+  (package-install 'erc))
+;; Autocomplete and project management related
+(unless (package-installed-p 'projectile)
+  (package-install 'projectile))
+(unless (package-installed-p 'lsp-mode)
+  (package-install 'lsp-mode))
+(unless (package-installed-p 'lsp-ui)
+  (package-install 'lsp-ui))
+(unless (package-installed-p 'flycheck)
+  (package-install 'flycheck))
+(unless (package-installed-p 'company)
+  (package-install 'company))
+(unless (package-installed-p 'helm-lsp)
+  (package-install 'helm-lsp))
+
+;; Enable evil and evil collection
+(setq evil-want-keybinding nil)
+(setq evil-undo-system 'undo-fu)
+(require 'evil)
+(evil-mode 1)
+(when (require 'evil-collection nil t)
+  (evil-collection-init))
+
+;; Custom variables
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
  '(custom-enabled-themes (quote (tango-dark)))
+ '(helm-minibuffer-history-key "M-p")
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
- '(package-selected-packages
-   (quote
-    (w3m ox-html5slide org elfeed neotree vue-html-mode)))
+ '(package-selected-packages (quote (lsp-javacomp magit evil)))
  '(tool-bar-mode nil))
-
 (custom-set-faces
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 136 :width normal :foundry "DAMA" :family "Ubuntu Mono"))))
- '(custom-themed ((t nil))))
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
-(add-to-list 'load-path "/directory/containing/neotree/")
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+;; Configuring Elm
+(add-hook 'elm-mode-hook 'elm-format-on-save-mode)
+(require 'lsp-mode)
+(add-hook 'elm-mode-hook #'lsp)
 
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;; Configuring Java
+(require 'lsp-java)
+(add-hook 'java-mode-hook #'lsp)
 
-(global-set-key (kbd "C-x r") 'elfeed)
+;; RSS Feeds
 (setq elfeed-feeds
       '("http://feeds.macrumors.com/MacRumors-All"
-	"https://martinfowler.com/feed.atom"
-        "http://planet.emacsen.org/atom.xml"))
-
-(require 'ox-rss)
-(setq org-html-postamble "<hr /><p>Última Atualização: %T</p><p>Criado com <label class=\"heart\"><3</label> no %c</p>")
-
-(setq w3m-default-display-inline-images t)
-(global-set-key (kbd "C-x w") 'w3m)
-
-(setq dired-listing-switches "-alh")
-
-(setq visible-bell 1)
-
-(require 'fill-column-indicator) 
-(setq fci-rule-width 1)
-
-(delete-selection-mode 1)
-
-(require 'smooth-scrolling)
-(smooth-scrolling-mode 1)
-(setq smooth-scroll-margin 7)
-
-(projectile-mode +1)
-(define-key projectile-mode-map (kbd "s-o") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-
-(require 'elm-mode)
-(add-hook 'after-init-hook 'global-company-mode)
-
-(eval-after-load "haskell-mode"
-    '(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile))
-
-(eval-after-load "haskell-cabal"
-    '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
-
-(require 'flycheck)
-(with-eval-after-load 'flycheck
-      '(add-hook 'flycheck-mode-hook #'flycheck-elm-setup))
+        "https://www.davefarley.net/?feed=rss"
+        "https://thoughtworks.libsyn.com/rss"
+        "https://www.martinfowler.com/bliki/bliki.atom"
+        "https://feed.infoq.com"
+        "https://segunda.tech/rss.xml"))
