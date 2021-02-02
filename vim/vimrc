@@ -9,13 +9,15 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'dart-lang/dart-vim-plugin'
+" Plug 'natebosch/vim-lsc-dart'
 Plug 'thosakwe/vim-flutter'
 Plug 'elm-tooling/elm-language-server'
 Plug 'elm-tooling/elm-vim'
 Plug 'janko/vim-test'
 Plug 'andys8/vim-elm-syntax', { 'for': ['elm'] }
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'alvan/vim-closetag'
 Plug 'google/vim-searchindex'
 Plug 'junegunn/goyo.vim'
@@ -25,15 +27,17 @@ Plug 'will133/vim-dirdiff'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 " Highlighting e cores.
 syntax on
 color industry
+:highlight Pmenu ctermbg=gray guibg=gray
 
 " Destaca tabs e espaços no final das linha.
-exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
-set list
+" exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
+" set list
 
 " Configurações do wildmenu (auto completar o tab mais eficiência/visual).
 set wildmenu
@@ -88,9 +92,9 @@ set number
 " Tabs e indentação.
 set autoindent
 set smartindent
-set shiftwidth=2
+" set shiftwidth=2
 set expandtab
-set tabstop=2
+" set tabstop=2
 
 " Configurando vim-airline (tabs).
 let g:airline#extensions#tabline#enabled = 1
@@ -109,6 +113,8 @@ set cmdheight=3
 nmap <leader>rn <Plug>(coc-rename)
 " Apply AutoFix to problem on the current line.
 nmap <leader>af <Plug>(coc-fix-current)
+" For refactoring.
+nmap <leader>rf <Plug>(coc-codeaction-selected)
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -142,5 +148,16 @@ set undofile
 set undolevels=1000
 set undoreload=10000
 
-" Coc explorer (instalar antes usando :CocInstall coc-explorer)
+" Coc explorer (instalar antes usando :CocInstall coc-explorer).
 :nmap <space>e :CocCommand explorer<CR>
+
+command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+
+" Gitlab / git.
+let g:fugitive_gitlab_domains = ['https://git.serpro']
+let g:gitlab_api_keys = {'git.serpro': 'hypLdfHTkN6GK3kGKpq9'}
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Configurações do markdown.
+let g:instant_markdown_browser = "firefox --new-window"
