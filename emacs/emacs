@@ -23,8 +23,12 @@
   (package-install 'elfeed))
 (unless (package-installed-p 'neotree)         ;; file tree
   (package-install 'neotree))
-(unless (package-installed-p 'erc)             ;; irc client
-  (package-install 'erc))
+(unless (package-installed-p 'markdown-mode)   ;; better markdown support
+  (package-install 'markdown-mode))
+(unless (package-installed-p 'which-key)       ;; minor mode that displays key bindings
+  (package-install 'which-key))
+(unless (package-installed-p 'ag)              ;; search using ag
+  (package-install 'ag))
 ;; Autocomplete and project management related
 (unless (package-installed-p 'projectile)
   (package-install 'projectile))
@@ -58,7 +62,7 @@
  '(helm-minibuffer-history-key "M-p")
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
- '(package-selected-packages (quote (lsp-javacomp magit evil)))
+ '(package-selected-packages (quote (## lsp-javacomp magit evil)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -67,14 +71,26 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; Configuring Elm
-(add-hook 'elm-mode-hook 'elm-format-on-save-mode)
+;; Configuring general lsp support
 (require 'lsp-mode)
+(setq lsp-enable-links nil)
+
+;; Configuring lsp Elm
+(add-hook 'elm-mode-hook 'elm-format-on-save-mode)
 (add-hook 'elm-mode-hook #'lsp)
 
-;; Configuring Java
+;; Configuring lsp Java
 (require 'lsp-java)
 (add-hook 'java-mode-hook #'lsp)
+
+;; Enbales which-key (https://github.com/justbur/emacs-which-key)
+(which-key-mode)
+
+;; Neotree shortcut
+(global-set-key (kbd "C-x t") 'neotree-toggle)
+
+;; Show line number
+(global-display-line-numbers-mode)
 
 ;; RSS Feeds
 (setq elfeed-feeds
