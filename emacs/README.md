@@ -1,5 +1,5 @@
 # .emacs
-Minhas configurações para o editor emacs ([~/.emacs/init.el](init.el).
+Minhas configurações para o editor emacs ([~/.emacs/init.el](init.el)).
 
 ### Copiando ~/.emacs
 
